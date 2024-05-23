@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # college-platform
+=======
+# college-network
+>>>>>>> origin/master
 
 ## Project setup
 ```

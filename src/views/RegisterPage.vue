@@ -1,6 +1,7 @@
 <template>
     <div class="register-page">
       <header>
+<<<<<<< HEAD
         <h2>Create an Account</h2>
       </header>
       <main class="form-group">
@@ -10,11 +11,23 @@
             <input type="text" v-model="lastname" placeholder="Last Name" />
           </div>
           <input type="numbtexter" v-model="phonenumber" placeholder="Phone Number" />
+=======
+        <h2>Register</h2>
+      </header>
+      <main class="form-group">
+        <div class="form-container">
+            <div class="input-group">
+            <input type="text" v-model="firstname" placeholder="First Name" />
+            <input type="text" v-model="lastname" placeholder="Last Name" />
+          </div>
+          <input type="number" v-model="phonenumber" placeholder="Phone Number" />
+>>>>>>> origin/master
           <input type="text" v-model="email" placeholder="Email" />
           <div class="input-group">
           <input type="password" v-model="password" placeholder="Password" />
           <input type="password" v-model="confirmpassword" placeholder="Confirm Password" />
         </div>
+<<<<<<< HEAD
         <p>Date of Birth</p>
 <div class="input-group dob">
   <select v-model="day">
@@ -33,21 +46,48 @@
 <p>Gender</p>
 <div class="input-group gender">
   <label for="male">Male</label>
+=======
+          <p>Date of Birth</p>
+          <div class="input-group dob">
+            <select v-model="day">
+              <option value="" disabled selected>Day</option>
+              <option v-for="day in days" :key="day">{{ day }}</option>
+            </select>
+            <select v-model="month">s
+              <option value="" disabled selected>Month</option>
+              <option v-for="(month, index) in months" :key="index">{{ month }}</option>
+            </select>
+            <select v-model="year">
+              <option value="" disabled selected>Year</option>
+              <option v-for="year in years" :key="year">{{ year }}</option>
+            </select>
+          </div>
+          <p>Gender</p>
+          <div class="input-group gender">
+            <label for="male">Male</label>
+>>>>>>> origin/master
             <input type="radio" id="male" name="gender" value="male" v-model="gender">
             <label for="female">Female</label>
             <input type="radio" id="female" name="gender" value="female" v-model="gender">
             <label for="other">Custom</label>
             <input type="radio" id="other" name="gender" value="other" v-model="gender">
           </div>
+<<<<<<< HEAD
           <p> <button class="register-btn"  @click="register" > Sign Up</button></p>
           <p>
             Already registered? <router-link class="link" to="/sign-in">Sign in</router-link>.
+=======
+          <button class="register-btn">Sign Up</button>
+          <p>
+            Already registered? <router-link class="link" to="/loginPage">Sign in</router-link>.
+>>>>>>> origin/master
           </p>
         </div>
       </main>
     </div>
   </template>
   
+<<<<<<< HEAD
   <script setup>
   
   import {ref} from "vue";
@@ -86,6 +126,41 @@ const years = [...Array(100).keys()].map(year => year + 1930);
   };
   </script>
   <style  scoped>
+=======
+  <script>
+  export default {
+    name: 'registerPage',
+    data() {
+      return {
+        fullname: "",
+        phonenumber: "",
+        email: "",
+        day: "",
+        month: "",
+        year: "",
+        gender: ""
+      }
+    },
+    computed: {
+      days() {
+        return Array.from({ length: 31 }, (_, i) => i + 1);
+      },
+      months() {
+        return [
+          "January", "February", "March", "April", "May", "June",
+          "July", "August", "September", "October", "November", "December"
+        ];
+      },
+      years() {
+        const currentYear = new Date().getFullYear();
+        return Array.from({ length: 100 }, (_, i) => currentYear - i);
+      }
+    }
+  }
+  </script>
+  
+  <style lang="scss" scoped>
+>>>>>>> origin/master
   .register-page {
     display: flex;
     flex-direction: column;

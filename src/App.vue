@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <div id="app" :class="{ 'dark-theme': isDarkTheme }">
     <Navbar @toggleSideNav="toggleSideNav"/>
     <div class="sidenav-overlay" :class="{ 'sidenav-open': isSideNavOpen }" @click="toggleSideNav"></div>
@@ -92,3 +93,25 @@ export default {
 <style scoped>
 /* Add your styles here */
 </style>
+=======
+  <div id="app">
+
+    <router-view/>
+  </div>
+</template>
+<style lang="scss">
+
+body{
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #F7F7F7 ; 
+  font-family: 'Roboto', Helvetica, sans-serif;
+}
+#app{
+  width: 100vw;
+  min-height:100vh;
+}
+</style>
+>>>>>>> origin/master
